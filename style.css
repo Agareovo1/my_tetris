@@ -1,0 +1,42 @@
+.frame{
+ display: flex;
+}
+
+.gameGrid {
+ width: 200px;
+ height: 400px;
+ display: flex;
+ flex-wrap: wrap;
+ background-color: grey;
+}
+
+.preview-grid {
+ margin-left: 50px;
+ width: 80px;
+ height: 80px;
+ display: flex;
+ flex-wrap: wrap;
+ background-color: grey;
+}
+
+.preview-grid div {
+ height: 20px;
+ width: 20px;
+}
+.game-details{
+ margin-top: 200px;
+margin-left: 80px;
+}
+
+.play{
+ margin-left: 50px;
+}
+.gameGrid div {
+ height: 20px;
+ width: 20px;
+}
+
+.tetromino {
+ background-color: blue;
+
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+ <meta charset="utf-8">
+ <title>My Tetris</title>
+ <script src="app.js"></script>
+ <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+ <div class="frame">
+  <div class="gameGrid"></div>
+  <div class="preview-grid"></div>
+
+  <div class="play">
+   <h2>Controls</h2>
+   <p><strong>top arrow key:</strong> rotate</p>
+   <p><strong>left arrow key:</strong>move left</p>
+   <p><strong>bottom arrow key:</strong> move down faster</p>
+   <p><strong>right arrow key:</strong>move right</p>
+  </div>
+  <div class="game-details">
+   <h1>Tetris</h1>
+   <h3>Score: <span id="score">0</span></h3>
+   <button id="start-button">Start/Pause</button>
+  </div>
+ </div>
+ 
+ <script>
+  const gameGrid = document.querySelector('.gameGrid');
+  const previewGrid = document.querySelector('.preview-grid');
+
+  // Create the gameGrid with 200 empty divs
+  for (let i = 0; i < 200; i++) {
+   const gridCell = document.createElement('div');
+   gameGrid.appendChild(gridCell);
+  }
+
+  // Create the 10 taken divs
+  for (let i = 0; i < 10; i++) {
+   const takenCell = document.createElement('div');
+   takenCell.classList.add('taken');
+   gameGrid.appendChild(takenCell);
+  }
+
+  // Create the preview-grid with 16 divs
+  for (let i = 0; i < 16; i++) {
+   const previewGridCell = document.createElement('div');
+   previewGrid.appendChild(previewGridCell);
+  }
+ </script>
+</body>
+
+</html>
